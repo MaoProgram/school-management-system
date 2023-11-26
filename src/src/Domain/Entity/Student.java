@@ -15,7 +15,7 @@ public class Student {
     private LocalDate dateOfBirth;
     private String status;
 
-    public Student(int id, String name, String lastName, LocalDate dateOfBirth,String status) {
+    public Student(int id, String name, String lastName, LocalDate dateOfBirth, String status) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
@@ -65,5 +65,14 @@ public class Student {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + this.getId() +
+                "\nName: " + this.getName() +
+                "\nLastName: " + this.getLastName() +
+                "\nDate of Birth: " + this.getdateOfBirth() +
+                "\nStatus: " + this.getStatus();
     }
 }

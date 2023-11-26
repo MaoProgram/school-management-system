@@ -1,6 +1,14 @@
 package Domain.Entity;
 
+import java.util.List;
+
 public class Course {
+    private List<Course> courseList;
+
+
+    public List<Course> getCourseList() {
+        return courseList;
+    }
     private int id;
     private String name;
     private String description;
@@ -8,6 +16,10 @@ public class Course {
     private String version;
 
     public Course() {
+
+    }
+
+    public Course(int id, String name, String description, String creditsNumber, String version) {
         this.id = id;
         this.name = name;
         this.description = description;

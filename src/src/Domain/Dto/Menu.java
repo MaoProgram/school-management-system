@@ -14,15 +14,16 @@ Services services = new Services();
     public void menuPrincipal() {
         Scanner VlInput = new Scanner(System.in);
         int selector = showMenuPrincipalOptions();
-        while (selector != 5) {
+        while (selector != 7) {
 
             switch (selector) {
 
                 case 1 -> academic.addStudent();
                 case 2 -> academic.consultStudent();
-                case 3 -> academic.addStudent();
-                case 4 -> academic.consultStudent();
-
+                case 3 -> academic.addCourse();
+                case 4 -> academic.consultCourse();
+                case 5 -> academic.enrollStudentCourse(students,courses);
+                case 6 -> academic.unsubscribeStudentCourse();
             }
             selector = showMenuPrincipalOptions();
         }
@@ -45,10 +46,10 @@ Services services = new Services();
 
 
         Scanner scanner = new Scanner(System.in);
-        int selector = 5;
+        int selector = 7;
         try {
             selector = scanner.nextInt();
-            if (selector < 1 || selector > 4) {
+            if (selector < 1 || selector > 6) {
                 System.out.println("| The Option selected is not valid. Please try again |");
                 showMenuPrincipalOptions();
             }
